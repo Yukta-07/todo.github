@@ -34,8 +34,8 @@ const handleCompleteTodo=(index)=>{
   let hr= now.getHours();
   let min = now.getMinutes();
   let seconds = now.getSeconds();
-  let completedOn = dd + '-' + mm +'-'+ yy + ' '+ 'at' +' '+ hr +':'+ min +':'+seconds;
-
+  // let completedOn = dd + '-' + mm +'-'+ yy + ' '+ 'at' +' '+ hr +':'+ min +':'+seconds;
+  let completedOn = `${dd}- ${mm}- ${yy} at ${hr}-${min} -${seconds}`;
 let filteredItem ={
   ...allTodos[index],
   completedOn:completedOn
@@ -84,10 +84,10 @@ if(savedCompletedTodo){
             </div>
           </div>
         <div className="btn-area">
-        <button className={'secondary-btn ${isCompleteScreen === false ? "active" : ""}'} onClick={()=>setIsCompleteScreen(false)} >to-do
+        <button className={`secondary-btn ${isCompleteScreen === false ? "active" : ""}`} onClick={()=>setIsCompleteScreen(false)} >to-do
           </button>
           
-        <button className={'secondary-btn ${isCompleteScreen === true ?"active" : "" }'} onClick={()=>setIsCompleteScreen(true)}>Completed
+        <button className={`secondary-btn ${isCompleteScreen === true ? "active" : "" }`} onClick={()=>setIsCompleteScreen(true)}>Completed
         </button>
         </div>
       
