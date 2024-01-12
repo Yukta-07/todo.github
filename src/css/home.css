@@ -1,0 +1,140 @@
+:root{
+    --primary-color:#414040;
+}
+body{
+    background-color:white;
+    color: white;
+    overflow: hidden;
+   
+
+}
+h1{
+    text-align: centre;
+   
+}
+.todo-wrapper{
+    background-color: #353434;
+   padding: 2%;
+   width: fit-content;
+   margin-left: auto;
+   margin-right: auto;
+    flex-wrap: wrap;
+    margin-top: 3%;
+    max-height:80vh;
+    margin-bottom: 20px;
+    overflow-y: auto;
+    box-shadow: 0px 5px 7px rgb(0, 0, .1);
+
+}
+.todo-input {
+    display: flex;
+    align-items: centre;
+    justify-content: centre;
+    border-bottom: 1px solid rgba(138, 131, 129, 0.018);
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+
+}
+.input-item{
+    display: flex;
+  flex-direction: column;
+    align-items: flex-start;
+    margin-right: 25px;
+}
+.input-item label{
+  font-weight: bold;
+  margin-bottom: 10px;
+
+}
+.input-item input{
+  padding: 8px;
+  border: none;
+  width: 300px;
+}
+.input-item input{
+  outline: 2px solid rgb(80, 191, 231);
+  outline: none;
+}
+.Primary-btn{
+  background-color: rgb(80, 191, 231);
+  color: white;
+  border: none;
+  padding-top:8px;
+  padding-bottom: 8px;
+  border-radius: 0px;
+  margin-top:30px;
+width:60px;
+  cursor: pointer;
+  font-weight: bold;
+
+}
+.Primary-btn:hover{
+  background-color: rgb(36, 91, 111);
+}
+.secondary-btn{
+  background-color: rgb(71, 71, 71);
+  color: white;
+  border: none;
+  padding-top:8px;
+  padding-bottom: 8px;
+  border-radius: 0px;
+  margin-top:30px;
+  width:15%;
+  cursor: pointer;
+  font-weight: bold;
+  font-size:16px;
+
+}
+ .active{
+  background-color: rgb(36, 91, 111);
+}
+
+
+
+.todo-list{
+    display: flex;
+    flex-direction: column;
+  
+
+
+  }
+  .btn-area{
+    margin-bottom: 25px;
+  }
+  .todo-list-item{
+    background-color: #414040;
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    align-items: centre;
+    box-shadow: 0px 3px 5px grey;
+  }
+  .todo-list-item h3{
+    font-size: 30px;
+    color:rgb(80, 191, 231);
+    font-weight: 600;
+    margin: 0;
+  }
+  .todo-list-item p{
+    font-size:18px;
+    color: rgb(184, 223, 237);
+    margin-top: 8px;
+    
+  }
+  .icon{
+
+    font-size:35px;
+    cursor: pointer;
+  }
+  .check-icon{
+
+    font-size: 35px;
+    cursor: pointer;
+    color: rgb(63, 227, 88);
+  }
+  .check-icon:hover{
+    color: rgb(4, 197, 106);
+  }
