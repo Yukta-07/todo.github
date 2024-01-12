@@ -52,8 +52,8 @@ const handleDeleteCompletedTodo =(index)=>{
   let reducedTodo=[...completedTodos]
   reducedTodo.splice(index);
   localStorage.setItem('completedTodos',JSON.stringify(reducedTodo));
-  setCompletedTodos(reducedTodo);
-}
+  setCompletedTodos(reducedTodo); }
+
 
 useEffect(()=>
 {
@@ -84,10 +84,10 @@ if(savedCompletedTodo){
             </div>
           </div>
         <div className="btn-area">
-        <button className={'secondary-btn ${isCompleteScreen === false && "active" }'} onClick={()=>setIsCompleteScreen(false)} >to-do
+        <button className={'secondary-btn ${isCompleteScreen === false ? "active" : ""}'} onClick={()=>setIsCompleteScreen(false)} >to-do
           </button>
           
-        <button className={'secondary-btn ${isCompleteScreen === true && "active" }'} onClick={()=>setIsCompleteScreen(true)}>Completed
+        <button className={'secondary-btn ${isCompleteScreen === true ?"active" : "" }'} onClick={()=>setIsCompleteScreen(true)}>Completed
         </button>
         </div>
       
@@ -114,7 +114,7 @@ if(savedCompletedTodo){
             <div>
            <h1>{item.title}</h1>
            <p>{item.description}</p>
-           <p><small>Completd on:{item.completedOn}</small></p>
+           <p><small>Completed on: {item.completedOn}</small></p>
            <div>
             <AiOutlineDelete className='icon' onClick={()=>handleDeleteCompletedTodo(index)} title="delete?"/>
             </div>
